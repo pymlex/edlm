@@ -1,10 +1,9 @@
 ---
-title: OpenAPI
+title: API Reference
 sidebar_position: 10
+hide_table_of_contents: true
 ---
 
-# OpenAPI
+import ApiDocMdx from '@theme/ApiDocMdx';
 
-Спецификация REST-методов в формате OpenAPI.
-
-[Открыть спецификацию](../api_specs/openapi.yaml)
+<ApiDocMdx id="openapi" />
