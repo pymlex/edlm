@@ -5,6 +5,7 @@ sidebar_position: 7
 
 ## Use-case диаграмма
 
+```plantuml
 @startuml
 left to right direction
 skinparam packageStyle rectangle
@@ -44,9 +45,11 @@ UC2 <.. UC3 : extend
 UC4 ..> UC5 : include
 UC8 <.. UC9 : extend
 @enduml
+```
 
 ## Sequence-диаграмма: UC-4 Публикация и рецензия
 
+```plantuml
 @startuml
 title UC-4 Публикация курса и инициирование экспертной рецензии
 
@@ -79,3 +82,4 @@ else Нужна рецензия
   CS --> AUI : Курс отправлен на доработку
 end
 @enduml
+```

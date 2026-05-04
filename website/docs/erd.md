@@ -5,6 +5,7 @@ sidebar_position: 13
 
 ## Концептуальная модель
 
+```plantuml
 @startuml
 hide circle
 skinparam linetype ortho
@@ -36,6 +37,7 @@ category ||--o{ course : classifies
 category ||--o{ category : parent
 course }o--o{ tag : tagged_by
 @enduml
+```
 
 ## Логическая модель (основные сущности)
 - Пользователь, AuthAccount, Session, Course, Draft, DraftVersion, Material, Enrollment, Review, Category, Tag.
