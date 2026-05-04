@@ -1,0 +1,635 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/edlm/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/edlm/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "api",
+              "path": "/edlm/docs/api",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "api-spec",
+              "path": "/edlm/docs/api-spec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "async",
+              "path": "/edlm/docs/async",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "bpmn",
+              "path": "/edlm/docs/bpmn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept",
+              "path": "/edlm/docs/concept",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "erd",
+              "path": "/edlm/docs/erd",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "frontend",
+              "path": "/edlm/docs/frontend",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "functional",
+              "path": "/edlm/docs/functional",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/edlm/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "nonfunctional",
+              "path": "/edlm/docs/nonfunctional",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "platformization",
+              "path": "/edlm/docs/platformization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "requirements-gathering",
+              "path": "/edlm/docs/requirements-gathering",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "storage",
+              "path": "/edlm/docs/storage",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "uml",
+              "path": "/edlm/docs/uml",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/edlm/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  },
+  "docusaurus-plugin-redoc": {
+    "openapi": {
+      "url": "redocusaurus\\openapi.yaml",
+      "themeId": "theme-redoc",
+      "isSpecFile": true,
+      "normalizeUrl": true,
+      "spec": {
+        "openapi": "3.1.0",
+        "info": {
+          "title": "EDLM API",
+          "version": "1.0.0"
+        },
+        "servers": [
+          {
+            "url": "https://api.example.com"
+          }
+        ],
+        "paths": {
+          "/courses/search": {
+            "post": {
+              "summary": "Search courses",
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/CourseSearchRequest"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Search result",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/CourseSearchResponse"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/courses/{courseId}": {
+            "get": {
+              "summary": "Get course details",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Course details",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/CourseDetail"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/courses/{courseId}/reviews": {
+            "get": {
+              "summary": "Get reviews",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Review list",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/ReviewListResponse"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "post": {
+              "summary": "Create review",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/CreateReviewRequest"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "201": {
+                  "description": "Created"
+                }
+              }
+            }
+          },
+          "/enrollments": {
+            "post": {
+              "summary": "Enroll in course",
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/CreateEnrollmentRequest"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "201": {
+                  "description": "Created"
+                }
+              }
+            }
+          },
+          "/courses/{courseId}/drafts": {
+            "post": {
+              "summary": "Create draft",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "201": {
+                  "description": "Created"
+                }
+              }
+            }
+          },
+          "/courses/{courseId}/drafts/{draftId}": {
+            "get": {
+              "summary": "Get draft",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "name": "draftId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Draft"
+                }
+              }
+            },
+            "patch": {
+              "summary": "Update draft",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "name": "draftId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/UpdateDraftRequest"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "204": {
+                  "description": "Updated"
+                }
+              }
+            }
+          },
+          "/courses/{courseId}/drafts/{draftId}/materials": {
+            "post": {
+              "summary": "Upload material",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "name": "draftId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "201": {
+                  "description": "Created"
+                }
+              }
+            }
+          },
+          "/courses/{courseId}/drafts/{draftId}/generate": {
+            "post": {
+              "summary": "Generate content",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "name": "draftId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/GenerateDraftRequest"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Generated"
+                }
+              }
+            }
+          },
+          "/courses/{courseId}/drafts/{draftId}/publish": {
+            "post": {
+              "summary": "Publish draft",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "name": "draftId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Published"
+                }
+              }
+            }
+          }
+        },
+        "components": {
+          "schemas": {
+            "CourseSearchRequest": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string"
+                },
+                "page": {
+                  "type": "integer"
+                },
+                "pageSize": {
+                  "type": "integer"
+                }
+              }
+            },
+            "CourseSearchResponse": {
+              "type": "object",
+              "properties": {
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseCard"
+                  }
+                }
+              }
+            },
+            "CourseCard": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              }
+            },
+            "CourseDetail": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              }
+            },
+            "ReviewListResponse": {
+              "type": "object",
+              "properties": {
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Review"
+                  }
+                }
+              }
+            },
+            "Review": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              }
+            },
+            "CreateReviewRequest": {
+              "type": "object",
+              "properties": {
+                "rating": {
+                  "type": "integer"
+                },
+                "text": {
+                  "type": "string"
+                }
+              }
+            },
+            "CreateEnrollmentRequest": {
+              "type": "object",
+              "properties": {
+                "courseId": {
+                  "type": "string"
+                }
+              }
+            },
+            "UpdateDraftRequest": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "GenerateDraftRequest": {
+              "type": "object",
+              "properties": {
+                "prompt": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "docusaurus-theme-redoc": {
+    "theme-redoc": {
+      "lightTheme": {
+        "typography": {
+          "fontFamily": "var(--ifm-font-family-base)",
+          "fontSize": "var(--ifm-font-size-base)",
+          "lineHeight": "var(--ifm-line-height-base)",
+          "fontWeightLight": "var(--ifm-font-weight-light)",
+          "fontWeightRegular": "var(--ifm-font-weight-base)",
+          "fontWeightBold": "var(--ifm-font-weight-bold)",
+          "headings": {
+            "fontFamily": "var(--ifm-heading-font-family)",
+            "fontWeight": "var(--ifm-heading-font-weight)",
+            "lineHeight": "var(--ifm-heading-line-height)"
+          },
+          "code": {
+            "fontFamily": "var(--ifm-font-family-monospace)",
+            "lineHeight": "var(--ifm-pre-line-height)"
+          }
+        },
+        "sidebar": {
+          "width": "300px",
+          "backgroundColor": "#ffffff"
+        },
+        "rightPanel": {
+          "backgroundColor": "#303846"
+        },
+        "colors": {
+          "primary": {
+            "main": "#2563eb"
+          }
+        },
+        "theme": {
+          "prism": {
+            "additionalLanguages": [
+              "scala"
+            ]
+          }
+        }
+      },
+      "darkTheme": {
+        "typography": {
+          "fontFamily": "var(--ifm-font-family-base)",
+          "fontSize": "var(--ifm-font-size-base)",
+          "lineHeight": "var(--ifm-line-height-base)",
+          "fontWeightLight": "var(--ifm-font-weight-light)",
+          "fontWeightRegular": "var(--ifm-font-weight-base)",
+          "fontWeightBold": "var(--ifm-font-weight-bold)",
+          "headings": {
+            "fontFamily": "var(--ifm-heading-font-family)",
+            "fontWeight": "var(--ifm-heading-font-weight)",
+            "lineHeight": "var(--ifm-heading-line-height)"
+          },
+          "code": {
+            "fontFamily": "var(--ifm-font-family-monospace)",
+            "lineHeight": "var(--ifm-pre-line-height)"
+          }
+        },
+        "sidebar": {
+          "width": "300px",
+          "backgroundColor": "rgb(24, 25, 26)",
+          "textColor": "#f5f6f7",
+          "arrow": {
+            "color": "#f5f6f7"
+          }
+        },
+        "colors": {
+          "text": {
+            "primary": "#f5f6f7",
+            "secondary": "rgba(255, 255, 255, 1)"
+          },
+          "gray": {
+            "50": "#FAFAFA",
+            "100": "#F5F5F5"
+          },
+          "border": {
+            "dark": "#ffffff",
+            "light": "rgba(0,0,0, 0.1)"
+          },
+          "primary": {
+            "main": "#2563eb"
+          }
+        },
+        "schema": {
+          "nestedBackground": "rgb(24, 25, 26)",
+          "typeNameColor": "rgba(255, 255, 255, 1)",
+          "typeTitleColor": "rgba(255, 255, 255, 1)"
+        },
+        "theme": {
+          "prism": {
+            "additionalLanguages": [
+              "scala"
+            ]
+          }
+        }
+      },
+      "options": {
+        "scrollYOffset": "nav.navbar",
+        "expandSingleSchemaField": true,
+        "menuToggle": true,
+        "suppressWarnings": true
+      }
+    }
+  },
+  "docusaurus-plugin-drawio": {
+    "default": {
+      "id": "default"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "uml",
+  "title": "UML-диаграммы",
+  "description": "Раздел для sequence-диаграммы и связей между сущностями.",
+  "source": "@site/docs/uml.md",
+  "sourceDirName": ".",
+  "slug": "/uml",
+  "permalink": "/edlm/docs/uml",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "UML-диаграммы",
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "BPMN",
+    "permalink": "/edlm/docs/bpmn"
+  },
+  "next": {
+    "title": "Фронтенд",
+    "permalink": "/edlm/docs/frontend"
+  }
+}

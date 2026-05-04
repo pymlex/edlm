@@ -1,0 +1,23 @@
+{
+  "id": "platformization",
+  "title": "Платформизация",
+  "description": "Раздел для итогового описания платформенного слоя.",
+  "source": "@site/docs/platformization.md",
+  "sourceDirName": ".",
+  "slug": "/platformization",
+  "permalink": "/edlm/docs/platformization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "Платформизация",
+    "sidebar_position": 14
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ERD",
+    "permalink": "/edlm/docs/erd"
+  }
+}

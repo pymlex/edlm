@@ -1,0 +1,27 @@
+{
+  "id": "api-spec",
+  "title": "OpenAPI",
+  "description": "Спецификация REST-методов в формате OpenAPI.",
+  "source": "@site/docs/api-spec.md",
+  "sourceDirName": ".",
+  "slug": "/api-spec",
+  "permalink": "/edlm/docs/api-spec",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "OpenAPI",
+    "sidebar_position": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "REST-методы",
+    "permalink": "/edlm/docs/api"
+  },
+  "next": {
+    "title": "Хранение данных",
+    "permalink": "/edlm/docs/storage"
+  }
+}

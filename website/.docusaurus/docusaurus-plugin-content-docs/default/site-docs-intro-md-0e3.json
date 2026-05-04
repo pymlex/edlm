@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "Введение",
+  "description": "Документация собрана по разделам курса. Ниже лежат артефакты по концепции, требованиям, моделированию, фронтенду, API, хранению данных и асинхронному взаимодействию.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/edlm/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Введение",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Концепция и границы",
+    "permalink": "/edlm/docs/concept"
+  }
+}
