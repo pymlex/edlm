@@ -1,0 +1,19 @@
+{
+  "id": "api-spec",
+  "title": "API Reference",
+  "description": "",
+  "source": "@site/docs/api-spec.md",
+  "sourceDirName": ".",
+  "slug": "/api-spec",
+  "permalink": "/edlm/docs/api-spec",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "API Reference",
+    "sidebar_position": 10,
+    "hide_table_of_contents": true
+  }
+}

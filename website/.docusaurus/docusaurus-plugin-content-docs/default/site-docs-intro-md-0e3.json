@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "О проекте",
+  "description": "ИС позволяет генерировать курсы, статьи и другие образовательные материалы с помощью LLM. Контент формируется с учётом указанных пользователем сложности, тематики и структуры. Источники: открытые курсы Stepik, статьи Medium, личные материалы пользователя. Реализована публикация сгенерированного контента на персональной странице, его чтение, рецензирование и распространение — элементы академической соцсети.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/edlm/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "О проекте",
+    "sidebar_position": 1
+  },
+  "sidebar": "docsSidebar",
+  "next": {
+    "title": "Концепция и границы",
+    "permalink": "/edlm/docs/requirements/concept"
+  }
+}

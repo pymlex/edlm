@@ -1,0 +1,27 @@
+{
+  "id": "concept",
+  "title": "Концепция и границы",
+  "description": "Раздел фиксирует назначение системы, границы MVP и основные сущности.",
+  "source": "@site/docs/concept.md",
+  "sourceDirName": ".",
+  "slug": "/concept",
+  "permalink": "/edlm/docs/concept",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Концепция и границы",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Введение",
+    "permalink": "/edlm/docs/intro"
+  },
+  "next": {
+    "title": "Функциональные требования",
+    "permalink": "/edlm/docs/functional"
+  }
+}

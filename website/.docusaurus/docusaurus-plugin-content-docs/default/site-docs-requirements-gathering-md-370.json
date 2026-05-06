@@ -1,0 +1,27 @@
+{
+  "id": "requirements-gathering",
+  "title": "Сбор требований",
+  "description": "Раздел фиксирует способы сбора и уточнения требований.",
+  "source": "@site/docs/requirements-gathering.md",
+  "sourceDirName": ".",
+  "slug": "/requirements-gathering",
+  "permalink": "/edlm/docs/requirements-gathering",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Сбор требований",
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Нефункциональные требования",
+    "permalink": "/edlm/docs/nonfunctional"
+  },
+  "next": {
+    "title": "BPMN",
+    "permalink": "/edlm/docs/bpmn"
+  }
+}

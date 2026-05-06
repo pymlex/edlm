@@ -1,0 +1,129 @@
+{
+  "/edlm/__docusaurus/debug-79c": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---edlm-docusaurus-debugb-38-ec5"
+    }
+  },
+  "/edlm/__docusaurus/debug/config-d36": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---edlm-docusaurus-debugb-38-ec5"
+    }
+  },
+  "/edlm/__docusaurus/debug/content-2dd": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---edlm-docusaurus-debugb-38-ec5"
+    },
+    "__props": "__props---edlm-docusaurus-debug-content-048-eb4"
+  },
+  "/edlm/__docusaurus/debug/globalData-5ec": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---edlm-docusaurus-debugb-38-ec5"
+    }
+  },
+  "/edlm/__docusaurus/debug/metadata-2bb": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---edlm-docusaurus-debugb-38-ec5"
+    }
+  },
+  "/edlm/__docusaurus/debug/registry-e5c": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---edlm-docusaurus-debugb-38-ec5"
+    }
+  },
+  "/edlm/__docusaurus/debug/routes-260": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---edlm-docusaurus-debugb-38-ec5"
+    }
+  },
+  "/edlm/docs-24c": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---edlm-docsaba-1e6"
+    }
+  },
+  "/edlm/docs-be5": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---edlm-docs-4-a-2-305"
+  },
+  "/edlm/docs-7f6": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/edlm/docs/api-spec-3a1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-api-spec-2-cd-dcb"
+  },
+  "/edlm/docs/architecture/async-864": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-architecture-asyncd-65-7f4"
+  },
+  "/edlm/docs/architecture/bpmn-897": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-architecture-bpmn-3-cd-e8c"
+  },
+  "/edlm/docs/architecture/c4-903": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-architecture-c-4-fcd-4e3"
+  },
+  "/edlm/docs/architecture/erd-b77": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-architecture-erd-105-269"
+  },
+  "/edlm/docs/architecture/platformization-c3f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-architecture-platformizatione-2-e-f4f"
+  },
+  "/edlm/docs/architecture/storage-ed0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-architecture-storage-2-f-2-247"
+  },
+  "/edlm/docs/interface/api-3d7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-interface-apib-81-2b1"
+  },
+  "/edlm/docs/interface/api-spec-f23": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-interface-api-spec-10-c-b26"
+  },
+  "/edlm/docs/interface/frontend-39b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-interface-frontende-28-1ee"
+  },
+  "/edlm/docs/intro-7eb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-intro-0-e-3-165"
+  },
+  "/edlm/docs/requirements/concept-2f1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-requirements-concept-9-df-20c"
+  },
+  "/edlm/docs/requirements/functional-9f7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-requirements-functionalce-1-bd4"
+  },
+  "/edlm/docs/requirements/nonfunctional-e17": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-requirements-nonfunctionalcfb-728"
+  },
+  "/edlm/docs/requirements/requirements-gathering-a70": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-requirements-requirements-gatheringef-6-c75"
+  },
+  "/edlm/docs/uml-51f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-umlce-3-15c"
+  },
+  "/edlm/-f64": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---edlm-a-74-be1"
+    },
+    "config": "config---edlm-5-e-9-090"
+  }
+}

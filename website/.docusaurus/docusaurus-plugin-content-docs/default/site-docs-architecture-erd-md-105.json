@@ -1,0 +1,27 @@
+{
+  "id": "architecture/erd",
+  "title": "Проектирование ERD",
+  "description": "Тип БД реляционный, как было определено в разделе по технологиям хранения данных. ERD реализованы на трёх уровнях: концептуальном, логическом, физическом.",
+  "source": "@site/docs/architecture/erd.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/erd",
+  "permalink": "/edlm/docs/architecture/erd",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Проектирование ERD",
+    "sidebar_position": 5
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Асинхронное взаимодействие",
+    "permalink": "/edlm/docs/architecture/async"
+  },
+  "next": {
+    "title": "Хранение данных",
+    "permalink": "/edlm/docs/architecture/storage"
+  }
+}
