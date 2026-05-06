@@ -14,7 +14,6 @@ sidebar_position: 5
 ```plantuml
 @startuml
 hide circle
-skinparam linetype ortho
 skinparam nodesep 100
 skinparam ranksep 100
 
