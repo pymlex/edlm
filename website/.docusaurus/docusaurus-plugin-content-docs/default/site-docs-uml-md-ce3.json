@@ -1,7 +1,7 @@
 {
   "id": "uml",
   "title": "UML-диаграммы",
-  "description": "Раздел для sequence-диаграммы и связей между сущностями.",
+  "description": "Use-case диаграмма",
   "source": "@site/docs/uml.md",
   "sourceDirName": ".",
   "slug": "/uml",
@@ -14,14 +14,5 @@
   "frontMatter": {
     "title": "UML-диаграммы",
     "sidebar_position": 7
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "BPMN",
-    "permalink": "/edlm/docs/bpmn"
-  },
-  "next": {
-    "title": "Фронтенд",
-    "permalink": "/edlm/docs/frontend"
   }
 }

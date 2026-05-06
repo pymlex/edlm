@@ -1,9 +1,8 @@
-const { themes: prismThemes } = require('prism-react-renderer');
 const simplePlantUML = require('@akebifiky/remark-simple-plantuml');
 
 const config = {
-  title: 'EDLM',
-  tagline: 'Документация по варианту 2',
+  title: 'edlm',
+  tagline: 'Docs as Code',
   favicon: 'img/favicon.ico',
   url: 'https://pymlex.github.io',
   baseUrl: '/edlm/',
@@ -13,21 +12,24 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
-  plugins: [['drawio', {}]],
+
+  plugins: [
+    ['drawio', {}],
+  ],
+
   presets: [
     [
       'classic',
       {
         docs: {
-          routeBasePath: 'docs',
-          sidebarPath: './sidebars.js',
-          remarkPlugins: [simplePlantUML]
+          sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [simplePlantUML],
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css'
-        }
-      }
+          customCss: './src/css/custom.css',
+        },
+      },
     ],
     [
       'redocusaurus',
@@ -35,32 +37,34 @@ const config = {
         specs: [
           {
             id: 'openapi',
-            spec: 'api_specs/openapi.yaml'
-          }
+            spec: 'api_specs/openapi.yaml',
+          },
         ],
-        theme: {
-          primaryColor: '#2563eb'
-        }
-      }
-    ]
+      },
+    ],
   ],
+
   themeConfig: {
     navbar: {
-      title: 'EDLM',
+      title: 'edlm',
       items: [
-        { to: '/docs/intro', label: 'Документация', position: 'left' },
-        { href: 'https://github.com/pymlex/edlm', label: 'GitHub', position: 'right' }
-      ]
+        { type: 'docSidebar', sidebarId: 'docsSidebar', position: 'left', label: 'Документация' },
+        { href: 'https://github.com/pymlex/edlm', label: 'GitHub', position: 'right' },
+      ],
     },
     footer: {
       style: 'dark',
-      copyright: 'EDLM'
+      links: [
+        {
+          title: 'Документы',
+          items: [
+            { label: 'Введение', to: '/docs/intro' },
+            { label: 'API Reference', to: '/docs/api-spec' },
+          ],
+        },
+      ],
     },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula
-    }
-  }
+  },
 };
 
 module.exports = config;

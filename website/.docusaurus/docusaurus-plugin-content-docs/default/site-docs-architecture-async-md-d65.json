@@ -1,0 +1,27 @@
+{
+  "id": "architecture/async",
+  "title": "Асинхронное взаимодействие",
+  "description": "Сценарий",
+  "source": "@site/docs/architecture/async.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/async",
+  "permalink": "/edlm/docs/architecture/async",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Асинхронное взаимодействие",
+    "sidebar_position": 4
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "C4-диаграмма",
+    "permalink": "/edlm/docs/architecture/c4"
+  },
+  "next": {
+    "title": "Проектирование ERD",
+    "permalink": "/edlm/docs/architecture/erd"
+  }
+}

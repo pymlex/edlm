@@ -11,79 +11,87 @@
           "mainDocId": "intro",
           "docs": [
             {
-              "id": "api",
-              "path": "/edlm/docs/api",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "api-spec",
-              "path": "/edlm/docs/api-spec",
-              "sidebar": "tutorialSidebar"
+              "path": "/edlm/docs/api-spec"
             },
             {
-              "id": "async",
-              "path": "/edlm/docs/async",
-              "sidebar": "tutorialSidebar"
+              "id": "architecture/async",
+              "path": "/edlm/docs/architecture/async",
+              "sidebar": "docsSidebar"
             },
             {
-              "id": "bpmn",
-              "path": "/edlm/docs/bpmn",
-              "sidebar": "tutorialSidebar"
+              "id": "architecture/bpmn",
+              "path": "/edlm/docs/architecture/bpmn",
+              "sidebar": "docsSidebar"
             },
             {
-              "id": "concept",
-              "path": "/edlm/docs/concept",
-              "sidebar": "tutorialSidebar"
+              "id": "architecture/c4",
+              "path": "/edlm/docs/architecture/c4",
+              "sidebar": "docsSidebar"
             },
             {
-              "id": "erd",
-              "path": "/edlm/docs/erd",
-              "sidebar": "tutorialSidebar"
+              "id": "architecture/erd",
+              "path": "/edlm/docs/architecture/erd",
+              "sidebar": "docsSidebar"
             },
             {
-              "id": "frontend",
-              "path": "/edlm/docs/frontend",
-              "sidebar": "tutorialSidebar"
+              "id": "architecture/platformization",
+              "path": "/edlm/docs/architecture/platformization",
+              "sidebar": "docsSidebar"
             },
             {
-              "id": "functional",
-              "path": "/edlm/docs/functional",
-              "sidebar": "tutorialSidebar"
+              "id": "architecture/storage",
+              "path": "/edlm/docs/architecture/storage",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "interface/api",
+              "path": "/edlm/docs/interface/api",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "interface/api-spec",
+              "path": "/edlm/docs/interface/api-spec",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "interface/frontend",
+              "path": "/edlm/docs/interface/frontend",
+              "sidebar": "docsSidebar"
             },
             {
               "id": "intro",
               "path": "/edlm/docs/intro",
-              "sidebar": "tutorialSidebar"
+              "sidebar": "docsSidebar"
             },
             {
-              "id": "nonfunctional",
-              "path": "/edlm/docs/nonfunctional",
-              "sidebar": "tutorialSidebar"
+              "id": "requirements/concept",
+              "path": "/edlm/docs/requirements/concept",
+              "sidebar": "docsSidebar"
             },
             {
-              "id": "platformization",
-              "path": "/edlm/docs/platformization",
-              "sidebar": "tutorialSidebar"
+              "id": "requirements/functional",
+              "path": "/edlm/docs/requirements/functional",
+              "sidebar": "docsSidebar"
             },
             {
-              "id": "requirements-gathering",
-              "path": "/edlm/docs/requirements-gathering",
-              "sidebar": "tutorialSidebar"
+              "id": "requirements/nonfunctional",
+              "path": "/edlm/docs/requirements/nonfunctional",
+              "sidebar": "docsSidebar"
             },
             {
-              "id": "storage",
-              "path": "/edlm/docs/storage",
-              "sidebar": "tutorialSidebar"
+              "id": "requirements/requirements-gathering",
+              "path": "/edlm/docs/requirements/requirements-gathering",
+              "sidebar": "docsSidebar"
             },
             {
               "id": "uml",
-              "path": "/edlm/docs/uml",
-              "sidebar": "tutorialSidebar"
+              "path": "/edlm/docs/uml"
             }
           ],
           "draftIds": [],
           "sidebars": {
-            "tutorialSidebar": {
+            "docsSidebar": {
               "link": {
                 "path": "/edlm/docs/intro",
                 "label": "intro"
@@ -104,7 +112,7 @@
       "spec": {
         "openapi": "3.1.0",
         "info": {
-          "title": "EDLM API",
+          "title": "Course Platform API",
           "version": "1.0.0"
         },
         "servers": [
@@ -115,7 +123,8 @@
         "paths": {
           "/courses/search": {
             "post": {
-              "summary": "Search courses",
+              "summary": "Поиск и фильтрация курсов",
+              "operationId": "searchCourses",
               "requestBody": {
                 "required": true,
                 "content": {
@@ -128,7 +137,7 @@
               },
               "responses": {
                 "200": {
-                  "description": "Search result",
+                  "description": "Список курсов",
                   "content": {
                     "application/json": {
                       "schema": {
@@ -142,20 +151,22 @@
           },
           "/courses/{courseId}": {
             "get": {
-              "summary": "Get course details",
+              "summary": "Получить курс по id",
+              "operationId": "getCourseById",
               "parameters": [
                 {
                   "name": "courseId",
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               ],
               "responses": {
                 "200": {
-                  "description": "Course details",
+                  "description": "Курс",
                   "content": {
                     "application/json": {
                       "schema": {
@@ -169,20 +180,22 @@
           },
           "/courses/{courseId}/reviews": {
             "get": {
-              "summary": "Get reviews",
+              "summary": "Получить отзывы курса",
+              "operationId": "getCourseReviews",
               "parameters": [
                 {
                   "name": "courseId",
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               ],
               "responses": {
                 "200": {
-                  "description": "Review list",
+                  "description": "Отзывы",
                   "content": {
                     "application/json": {
                       "schema": {
@@ -194,14 +207,16 @@
               }
             },
             "post": {
-              "summary": "Create review",
+              "summary": "Создать отзыв",
+              "operationId": "createCourseReview",
               "parameters": [
                 {
                   "name": "courseId",
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               ],
@@ -217,14 +232,22 @@
               },
               "responses": {
                 "201": {
-                  "description": "Created"
+                  "description": "Отзыв создан",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Review"
+                      }
+                    }
+                  }
                 }
               }
             }
           },
           "/enrollments": {
             "post": {
-              "summary": "Enroll in course",
+              "summary": "Записаться на курс",
+              "operationId": "createEnrollment",
               "requestBody": {
                 "required": true,
                 "content": {
@@ -237,41 +260,69 @@
               },
               "responses": {
                 "201": {
-                  "description": "Created"
+                  "description": "Запись создана",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Enrollment"
+                      }
+                    }
+                  }
                 }
               }
             }
           },
           "/courses/{courseId}/drafts": {
             "post": {
-              "summary": "Create draft",
+              "summary": "Создать черновик курса",
+              "operationId": "createDraft",
               "parameters": [
                 {
                   "name": "courseId",
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               ],
+              "requestBody": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/CreateDraftRequest"
+                    }
+                  }
+                }
+              },
               "responses": {
                 "201": {
-                  "description": "Created"
+                  "description": "Черновик создан",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/DraftSummary"
+                      }
+                    }
+                  }
                 }
               }
             }
           },
           "/courses/{courseId}/drafts/{draftId}": {
             "get": {
-              "summary": "Get draft",
+              "summary": "Получить черновик",
+              "operationId": "getDraftById",
               "parameters": [
                 {
                   "name": "courseId",
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 },
                 {
@@ -279,25 +330,35 @@
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               ],
               "responses": {
                 "200": {
-                  "description": "Draft"
+                  "description": "Черновик",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/DraftDetail"
+                      }
+                    }
+                  }
                 }
               }
             },
             "patch": {
-              "summary": "Update draft",
+              "summary": "Обновить черновик",
+              "operationId": "updateDraft",
               "parameters": [
                 {
                   "name": "courseId",
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 },
                 {
@@ -305,7 +366,8 @@
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               ],
@@ -321,21 +383,23 @@
               },
               "responses": {
                 "204": {
-                  "description": "Updated"
+                  "description": "Черновик обновлён"
                 }
               }
             }
           },
           "/courses/{courseId}/drafts/{draftId}/materials": {
             "post": {
-              "summary": "Upload material",
+              "summary": "Загрузить материал",
+              "operationId": "uploadDraftMaterial",
               "parameters": [
                 {
                   "name": "courseId",
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 },
                 {
@@ -343,27 +407,47 @@
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "multipart/form-data": {
+                    "schema": {
+                      "$ref": "#/components/schemas/UploadMaterialRequest"
+                    }
+                  }
+                }
+              },
               "responses": {
                 "201": {
-                  "description": "Created"
+                  "description": "Материал загружен",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Material"
+                      }
+                    }
+                  }
                 }
               }
             }
           },
           "/courses/{courseId}/drafts/{draftId}/generate": {
             "post": {
-              "summary": "Generate content",
+              "summary": "Сгенерировать содержимое",
+              "operationId": "generateDraftContent",
               "parameters": [
                 {
                   "name": "courseId",
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 },
                 {
@@ -371,7 +455,8 @@
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               ],
@@ -387,21 +472,30 @@
               },
               "responses": {
                 "200": {
-                  "description": "Generated"
+                  "description": "Содержимое сгенерировано",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/GenerateDraftResponse"
+                      }
+                    }
+                  }
                 }
               }
             }
           },
           "/courses/{courseId}/drafts/{draftId}/publish": {
             "post": {
-              "summary": "Publish draft",
+              "summary": "Опубликовать черновик",
+              "operationId": "publishDraft",
               "parameters": [
                 {
                   "name": "courseId",
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 },
                 {
@@ -409,13 +503,59 @@
                   "in": "path",
                   "required": true,
                   "schema": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               ],
               "responses": {
                 "200": {
-                  "description": "Published"
+                  "description": "Черновик опубликован",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/PublishDraftResponse"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/courses/{courseId}/drafts/{draftId}/history": {
+            "get": {
+              "summary": "История черновика",
+              "operationId": "getDraftHistory",
+              "parameters": [
+                {
+                  "name": "courseId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                {
+                  "name": "draftId",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "История",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/DraftHistoryGraph"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -425,6 +565,11 @@
           "schemas": {
             "CourseSearchRequest": {
               "type": "object",
+              "required": [
+                "query",
+                "page",
+                "pageSize"
+              ],
               "properties": {
                 "query": {
                   "type": "string"
@@ -434,6 +579,16 @@
                 },
                 "pageSize": {
                   "type": "integer"
+                },
+                "sortBy": {
+                  "type": "string",
+                  "enum": [
+                    "relevance",
+                    "rating_desc",
+                    "price_asc",
+                    "price_desc",
+                    "newest"
+                  ]
                 }
               }
             },
@@ -445,6 +600,9 @@
                   "items": {
                     "$ref": "#/components/schemas/CourseCard"
                   }
+                },
+                "pageInfo": {
+                  "$ref": "#/components/schemas/PageInfo"
                 }
               }
             },
@@ -452,6 +610,25 @@
               "type": "object",
               "properties": {
                 "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "shortDescription": {
+                  "type": "string"
+                },
+                "authorName": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "status": {
                   "type": "string"
                 }
               }
@@ -460,6 +637,25 @@
               "type": "object",
               "properties": {
                 "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                },
+                "reviewsCount": {
+                  "type": "integer"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "status": {
                   "type": "string"
                 }
               }
@@ -472,6 +668,9 @@
                   "items": {
                     "$ref": "#/components/schemas/Review"
                   }
+                },
+                "pageInfo": {
+                  "$ref": "#/components/schemas/PageInfo"
                 }
               }
             },
@@ -479,12 +678,27 @@
               "type": "object",
               "properties": {
                 "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "rating": {
+                  "type": "integer"
+                },
+                "text": {
                   "type": "string"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
                 }
               }
             },
             "CreateReviewRequest": {
               "type": "object",
+              "required": [
+                "rating",
+                "text"
+              ],
               "properties": {
                 "rating": {
                   "type": "integer"
@@ -496,9 +710,83 @@
             },
             "CreateEnrollmentRequest": {
               "type": "object",
+              "required": [
+                "courseId"
+              ],
               "properties": {
                 "courseId": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "Enrollment": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "courseId": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "userId": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "enrolledAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            },
+            "CreateDraftRequest": {
+              "type": "object",
+              "properties": {
+                "title": {
                   "type": "string"
+                }
+              }
+            },
+            "DraftSummary": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "courseId": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "DraftDetail": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "courseId": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "materials": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Material"
+                  }
                 }
               }
             },
@@ -510,11 +798,112 @@
                 }
               }
             },
+            "UploadMaterialRequest": {
+              "type": "object",
+              "required": [
+                "file",
+                "type",
+                "title"
+              ],
+              "properties": {
+                "file": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "Material": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "fileUrl": {
+                  "type": "string"
+                }
+              }
+            },
             "GenerateDraftRequest": {
               "type": "object",
               "properties": {
                 "prompt": {
                   "type": "string"
+                }
+              }
+            },
+            "GenerateDraftResponse": {
+              "type": "object",
+              "properties": {
+                "draftId": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "generatedText": {
+                  "type": "string"
+                }
+              }
+            },
+            "PublishDraftResponse": {
+              "type": "object",
+              "properties": {
+                "courseId": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "draftId": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "publishedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            },
+            "DraftHistoryGraph": {
+              "type": "object",
+              "properties": {
+                "nodes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                },
+                "edges": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "PageInfo": {
+              "type": "object",
+              "properties": {
+                "page": {
+                  "type": "integer"
+                },
+                "pageSize": {
+                  "type": "integer"
+                },
+                "totalItems": {
+                  "type": "integer"
+                },
+                "totalPages": {
+                  "type": "integer"
                 }
               }
             }
@@ -552,7 +941,7 @@
         },
         "colors": {
           "primary": {
-            "main": "#2563eb"
+            "main": "#25c2a0"
           }
         },
         "theme": {
@@ -603,7 +992,7 @@
             "light": "rgba(0,0,0, 0.1)"
           },
           "primary": {
-            "main": "#2563eb"
+            "main": "#25c2a0"
           }
         },
         "schema": {

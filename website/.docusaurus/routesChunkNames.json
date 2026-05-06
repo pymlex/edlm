@@ -42,72 +42,80 @@
       "plugin": "plugin---edlm-docusaurus-debugb-38-ec5"
     }
   },
-  "/edlm/docs-b9b": {
+  "/edlm/docs-24c": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---edlm-docsaba-1e6"
     }
   },
-  "/edlm/docs-6e6": {
+  "/edlm/docs-be5": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---edlm-docs-4-a-2-305"
   },
-  "/edlm/docs-35f": {
+  "/edlm/docs-7f6": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/edlm/docs/api-74c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-api-5-fb-d3d"
-  },
-  "/edlm/docs/api-spec-759": {
+  "/edlm/docs/api-spec-3a1": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---edlm-docs-api-spec-2-cd-dcb"
   },
-  "/edlm/docs/async-52d": {
+  "/edlm/docs/architecture/async-864": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-asyncfb-3-4e0"
+    "content": "content---edlm-docs-architecture-asyncd-65-7f4"
   },
-  "/edlm/docs/bpmn-724": {
+  "/edlm/docs/architecture/bpmn-897": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-bpmn-905-a63"
+    "content": "content---edlm-docs-architecture-bpmn-3-cd-e8c"
   },
-  "/edlm/docs/concept-1eb": {
+  "/edlm/docs/architecture/c4-903": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-concept-949-a86"
+    "content": "content---edlm-docs-architecture-c-4-fcd-4e3"
   },
-  "/edlm/docs/erd-9e8": {
+  "/edlm/docs/architecture/erd-b77": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-erd-897-05f"
+    "content": "content---edlm-docs-architecture-erd-105-269"
   },
-  "/edlm/docs/frontend-eeb": {
+  "/edlm/docs/architecture/platformization-c3f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-frontend-29-f-9f2"
+    "content": "content---edlm-docs-architecture-platformizatione-2-e-f4f"
   },
-  "/edlm/docs/functional-118": {
+  "/edlm/docs/architecture/storage-ed0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-functional-969-065"
+    "content": "content---edlm-docs-architecture-storage-2-f-2-247"
   },
-  "/edlm/docs/intro-0fc": {
+  "/edlm/docs/interface/api-3d7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-interface-apib-81-2b1"
+  },
+  "/edlm/docs/interface/api-spec-f23": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-interface-api-spec-10-c-b26"
+  },
+  "/edlm/docs/interface/frontend-39b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---edlm-docs-interface-frontende-28-1ee"
+  },
+  "/edlm/docs/intro-7eb": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---edlm-docs-intro-0-e-3-165"
   },
-  "/edlm/docs/nonfunctional-70c": {
+  "/edlm/docs/requirements/concept-2f1": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-nonfunctionalf-5-e-f81"
+    "content": "content---edlm-docs-requirements-concept-9-df-20c"
   },
-  "/edlm/docs/platformization-aa8": {
+  "/edlm/docs/requirements/functional-9f7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-platformizationeee-519"
+    "content": "content---edlm-docs-requirements-functionalce-1-bd4"
   },
-  "/edlm/docs/requirements-gathering-ca1": {
+  "/edlm/docs/requirements/nonfunctional-e17": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-requirements-gathering-370-554"
+    "content": "content---edlm-docs-requirements-nonfunctionalcfb-728"
   },
-  "/edlm/docs/storage-acd": {
+  "/edlm/docs/requirements/requirements-gathering-a70": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---edlm-docs-storage-417-cc7"
+    "content": "content---edlm-docs-requirements-requirements-gatheringef-6-c75"
   },
-  "/edlm/docs/uml-811": {
+  "/edlm/docs/uml-51f": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---edlm-docs-umlce-3-15c"
   },

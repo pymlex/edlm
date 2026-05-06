@@ -1,0 +1,27 @@
+{
+  "id": "architecture/c4",
+  "title": "C4-диаграмма",
+  "description": "C1. System Context",
+  "source": "@site/docs/architecture/c4.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/c4",
+  "permalink": "/edlm/docs/architecture/c4",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "C4-диаграмма",
+    "sidebar_position": 2
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Моделирование в BPMN",
+    "permalink": "/edlm/docs/architecture/bpmn"
+  },
+  "next": {
+    "title": "Асинхронное взаимодействие",
+    "permalink": "/edlm/docs/architecture/async"
+  }
+}

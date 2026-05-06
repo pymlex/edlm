@@ -1,20 +1,38 @@
 const sidebars = {
-  tutorialSidebar: [
+  docsSidebar: [
     'intro',
-    'concept',
-    'functional',
-    'nonfunctional',
-    'requirements-gathering',
-    'bpmn',
-    'uml',
-    'frontend',
-    'api',
-    'api-spec',
-    'storage',
-    'async',
-    'erd',
-    'platformization'
-  ]
+    {
+      type: 'category',
+      label: 'Требования',
+      items: [
+        'requirements/concept',
+        'requirements/functional',
+        'requirements/nonfunctional',
+        'requirements/requirements-gathering',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Архитектура',
+      items: [
+        'architecture/bpmn',
+        'architecture/c4',
+        'architecture/async',
+        'architecture/erd',
+        'architecture/storage',
+        'architecture/platformization',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Интерфейс и API',
+      items: [
+        'interface/frontend',
+        'interface/api',
+        'interface/api-spec',
+      ],
+    },
+  ],
 };
 
 module.exports = sidebars;

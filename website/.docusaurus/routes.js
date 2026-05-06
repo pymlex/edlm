@@ -39,99 +39,109 @@ export default [
   },
   {
     path: '/edlm/docs',
-    component: ComponentCreator('/edlm/docs', 'b9b'),
+    component: ComponentCreator('/edlm/docs', '24c'),
     routes: [
       {
         path: '/edlm/docs',
-        component: ComponentCreator('/edlm/docs', '6e6'),
+        component: ComponentCreator('/edlm/docs', 'be5'),
         routes: [
           {
             path: '/edlm/docs',
-            component: ComponentCreator('/edlm/docs', '35f'),
+            component: ComponentCreator('/edlm/docs', '7f6'),
             routes: [
               {
-                path: '/edlm/docs/api',
-                component: ComponentCreator('/edlm/docs/api', '74c'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
                 path: '/edlm/docs/api-spec',
-                component: ComponentCreator('/edlm/docs/api-spec', '759'),
-                exact: true,
-                sidebar: "tutorialSidebar"
+                component: ComponentCreator('/edlm/docs/api-spec', '3a1'),
+                exact: true
               },
               {
-                path: '/edlm/docs/async',
-                component: ComponentCreator('/edlm/docs/async', '52d'),
+                path: '/edlm/docs/architecture/async',
+                component: ComponentCreator('/edlm/docs/architecture/async', '864'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
-                path: '/edlm/docs/bpmn',
-                component: ComponentCreator('/edlm/docs/bpmn', '724'),
+                path: '/edlm/docs/architecture/bpmn',
+                component: ComponentCreator('/edlm/docs/architecture/bpmn', '897'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
-                path: '/edlm/docs/concept',
-                component: ComponentCreator('/edlm/docs/concept', '1eb'),
+                path: '/edlm/docs/architecture/c4',
+                component: ComponentCreator('/edlm/docs/architecture/c4', '903'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
-                path: '/edlm/docs/erd',
-                component: ComponentCreator('/edlm/docs/erd', '9e8'),
+                path: '/edlm/docs/architecture/erd',
+                component: ComponentCreator('/edlm/docs/architecture/erd', 'b77'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
-                path: '/edlm/docs/frontend',
-                component: ComponentCreator('/edlm/docs/frontend', 'eeb'),
+                path: '/edlm/docs/architecture/platformization',
+                component: ComponentCreator('/edlm/docs/architecture/platformization', 'c3f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
-                path: '/edlm/docs/functional',
-                component: ComponentCreator('/edlm/docs/functional', '118'),
+                path: '/edlm/docs/architecture/storage',
+                component: ComponentCreator('/edlm/docs/architecture/storage', 'ed0'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/edlm/docs/interface/api',
+                component: ComponentCreator('/edlm/docs/interface/api', '3d7'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/edlm/docs/interface/api-spec',
+                component: ComponentCreator('/edlm/docs/interface/api-spec', 'f23'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/edlm/docs/interface/frontend',
+                component: ComponentCreator('/edlm/docs/interface/frontend', '39b'),
+                exact: true,
+                sidebar: "docsSidebar"
               },
               {
                 path: '/edlm/docs/intro',
-                component: ComponentCreator('/edlm/docs/intro', '0fc'),
+                component: ComponentCreator('/edlm/docs/intro', '7eb'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
-                path: '/edlm/docs/nonfunctional',
-                component: ComponentCreator('/edlm/docs/nonfunctional', '70c'),
+                path: '/edlm/docs/requirements/concept',
+                component: ComponentCreator('/edlm/docs/requirements/concept', '2f1'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
-                path: '/edlm/docs/platformization',
-                component: ComponentCreator('/edlm/docs/platformization', 'aa8'),
+                path: '/edlm/docs/requirements/functional',
+                component: ComponentCreator('/edlm/docs/requirements/functional', '9f7'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
-                path: '/edlm/docs/requirements-gathering',
-                component: ComponentCreator('/edlm/docs/requirements-gathering', 'ca1'),
+                path: '/edlm/docs/requirements/nonfunctional',
+                component: ComponentCreator('/edlm/docs/requirements/nonfunctional', 'e17'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
-                path: '/edlm/docs/storage',
-                component: ComponentCreator('/edlm/docs/storage', 'acd'),
+                path: '/edlm/docs/requirements/requirements-gathering',
+                component: ComponentCreator('/edlm/docs/requirements/requirements-gathering', 'a70'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "docsSidebar"
               },
               {
                 path: '/edlm/docs/uml',
-                component: ComponentCreator('/edlm/docs/uml', '811'),
-                exact: true,
-                sidebar: "tutorialSidebar"
+                component: ComponentCreator('/edlm/docs/uml', '51f'),
+                exact: true
               }
             ]
           }
